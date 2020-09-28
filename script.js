@@ -29,37 +29,44 @@ function generatePassword() {
     }
   }
   
-  characterPool = ''
-  var lowerCase = "abcdefghijklmnopqrstuvwxyz";
-  var upperCase = lowerCase.toUpperCase();
-  var allNumbers = "0123456789";
-  var allSpecialChars = "~`!@#$%^&*()_-+={[}]|\\:;\"'<,>.?/"
-
-  // Does password contain uppercase?
-  var containsUpperCase = confirm("Password contains uppercase letters? \n\n OK - Yes \n Cancel - No");
-  if (containsUpperCase){
-    characterPool += upperCase;
+  var charArray = {
+    "lowercase" : "abcdefghijklmnopqrstuvwxyz",
+    "uppercase" : "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+    "numbers" : "0123456789",
+    "specialChar" : "~`!@#$%^&*()_-+={[}]|\\:;\"'<,>.?/",
   };
-  // Does password contain lowercase
-  var containsLowerCase = confirm("Password contains lowercase letters? \n\n OK - Yes \n Cancel - No");
-  if (containsLowerCase) {
-    characterPool += lowerCase;
+
+  characterPool = ''
+  var lowercaseList = "abcdefghijklmnopqrstuvwxyz";
+  var uppercaseList = lowercaseList.toUpperCase();
+  var numbersList = "0123456789";
+  var specialCharList = "~`!@#$%^&*()_-+={[}]|\\:;\"'<,>.?/"
+
+  // Does password contain uppercaseList?
+  var uppercaseConfirm = confirm("Password contains uppercase letters? \n\n OK - Yes \n Cancel - No");
+  if (uppercaseConfirm){
+    characterPool += uppercaseList;
+  };
+  // Does password contain lowercaseList
+  var lowercaseConfirm = confirm("Password contains lowercase letters? \n\n OK - Yes \n Cancel - No");
+  if (lowercaseConfirm) {
+    characterPool += lowercaseList;
   };
   // Does password contain numbers?
-  var containsNumbers = confirm("Password contains numbers? \n\n OK - Yes \n Cancel - No");
-  if (containsNumbers) {
-    characterPool += allNumbers;
+  var numbersConfirm = confirm("Password contains numbers? \n\n OK - Yes \n Cancel - No");
+  if (numbersConfirm) {
+    characterPool += numbersList;
   };
   // Does password special characters?
-  var containsSpecialChars = confirm("Password contains special characters? \n\n OK - Yes \n Cancel - No");
-  if (containsSpecialChars){
-    characterPool += allSpecialChars;
+  var specialCharConfirm = confirm("Password contains special characters? \n\n OK - Yes \n Cancel - No");
+  if (specialCharConfirm){
+    characterPool += specialCharList;
   };
   
   // Is at least one of the following true? contains-upper contains-lower contains-num contains-spec
 
   // for i in charLength
-  //  Choose a random var x = [uppercase lowercase number specialchar ]
+  //  Choose a random var x = [uppercaseList lowercaseList number specialchar ]
   //  Choose a random number between 0 and (x.length() - 1)
   //  return character
 
