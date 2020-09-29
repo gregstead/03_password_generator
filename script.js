@@ -29,12 +29,13 @@ function generatePassword() {
     }
   }
   
-  var charArray = {
-    "lowercase" : "abcdefghijklmnopqrstuvwxyz",
-    "uppercase" : "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-    "numbers" : "0123456789",
-    "specialChar" : "~`!@#$%^&*()_-+={[}]|\\:;\"'<,>.?/",
-  };
+  // Use an object to clean up code?
+  // var charArray = {
+  //   "lowercase" : "abcdefghijklmnopqrstuvwxyz",
+  //   "uppercase" : "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+  //   "numbers" : "0123456789",
+  //   "specialChar" : "~`!@#$%^&*()_-+={[}]|\\:;\"'<,>.?/",
+  // };
 
   characterPool = ''
   var lowercaseList = "abcdefghijklmnopqrstuvwxyz";
