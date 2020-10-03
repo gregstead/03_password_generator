@@ -22,7 +22,7 @@ This projects was created as the third homework assignment for the part-time cod
 
 ![Empty password generator](./assets/pwgen_screenshot1.png)
 
-![Password generator with password](./assets/pwgen_screenshot1.png)
+![Password generator with password](./assets/pwgen_screenshot2.png)
 
 
 ## Technologies
